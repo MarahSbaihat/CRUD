@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="auther" content="">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>CRUD</title>
+    <!-- font awesome 6 -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="container m-auto my-5">
+
+      <div class="title my-5 w-100">
+        <h1 class="h1 text-capitalize">product updating form</h1>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputProductName" class="form-label text-capitalize">product name<span class="text-danger">*</span></label>
+        <input type="text" id="productName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="alert alert-danger d-none" id="nameAlert">Please start name with capital letter, max is 8 letter</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputProductCategory" class="form-label text-capitalize">product category</label>
+        <input type="text" id="productCategory" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputProductPrice" class="form-label text-capitalize">product price</label>
+        <input type="number" id="productPrice" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputProductDescription" class="form-label text-capitalize">product description</label>
+        <textarea type="text" id="productDescription" class="form-control" id="exampleInputPassword1"></textarea>
+      </div>
+      <button disabled type="button" id="addBtn" class="btn btn-outline-primary mb-5 me-2">Add Products</button>
+      <button type="clear" class="btn btn-outline-primary mb-5 me-2">Clear</button>
+      <div class="d-block">
+        <button type="button" id="deleteBtn" class="btn btn-outline-danger mt-3 mb-3">Delete All</button>
+      </div>
+      <input type="search" onkeyup="search(this.value)" class="form-control mb-5" placeholder="search..."/>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Category</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- sweet alert -->
+    <script src="assets/js/sweetalert.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/js/main.js"></script>
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap 5 -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
